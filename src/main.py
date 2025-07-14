@@ -1,44 +1,52 @@
+import os
 import argparse
-from urllib.parse import urlparse
 from reddit_scraper import scrape_user_data
 from persona_generator import generate_persona_with_ollama
-import os
+from logger import setup_logger
+from rich.console import Console
 
-os.makedirs("output", exist_ok=True)
+logger = setup_logger()
+console = Console()
 
-def extract_username_from_url(url):
-    try:
-        parsed_url = urlparse(url)
-        parts = parsed_url.path.strip("/").split("/")
-        return parts[1] if parts[0] == "user" else None
-    except:
-        return None
-
-def save_persona_to_file(username, persona):
+def save_output(username, content):
+    os.makedirs("output", exist_ok=True)
     filename = f"output/{username}_persona.txt"
     with open(filename, "w", encoding="utf-8") as f:
-        f.write(persona)
-    print(f"✅ Persona saved to: {filename}")
+        f.write(content)
+    logger.info(f"✅ Persona saved to: {filename}")
+    console.print(f"[bold green]✅ Persona saved to:[/bold green] [white]{filename}[/white]")
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a Reddit user persona from profile URL.")
-    parser.add_argument("--url", required=True, help="Reddit user profile URL")
+    logger.info("✅ Persona Generator started.")
+    logger.info("🔍 Starting persona generation")
+    logger.debug("✅ This debug message will show only if DEBUG level is enabled")
 
+    parser = argparse.ArgumentParser(description="Generate Reddit User Persona using Ollama")
+    parser.add_argument("--username", required=True, help="Reddit username (without /user/)")
+    parser.add_argument("--model", default="tinyllama", help="Ollama model name to use")
     args = parser.parse_args()
-    url = args.url
-    username = extract_username_from_url(url)
 
-    if not username:
-        print("❌ Invalid Reddit user URL. Use format: https://www.reddit.com/user/username/")
+    username = args.username
+    model = args.model
+
+    logger.info(f"🔍 Starting user persona generation for '{username}' using model: {model}")
+    console.print(f"[bold cyan]🔍 Scraping data for user:[/bold cyan] {username}")
+
+    try:
+        data = scrape_user_data(username)
+    except Exception as e:
+        logger.error(f"❌ Error scraping Reddit user '{username}': {e}")
+        console.print(f"[bold red]❌ Error scraping user data:[/bold red] {e}")
         return
 
-    print(f"🔍 Scraping data for user: {username}")
-    data = scrape_user_data(username)
+    try:
+        persona = generate_persona_with_ollama(username, data["posts"], data["comments"], model=model)
+        save_output(username, persona)
+    except Exception as e:
+        logger.error(f"❌ Error generating persona: {e}")
+        console.print(f"[bold red]❌ Error generating persona:[/bold red] {e}")
 
-    print(f"🤖 Generating persona using Mistral model...")
-    persona = generate_persona_with_ollama(username, data["posts"], data["comments"])
-
-    save_persona_to_file(username, persona)
+    console.print("[bold magenta]🎉 Persona generation complete! Check the output folder.[/bold magenta]")
 
 if __name__ == "__main__":
     main()

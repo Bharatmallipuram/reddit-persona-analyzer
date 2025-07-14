@@ -1,5 +1,27 @@
-1. Interests: The user's interests are indicated as formal, casual, and sarcastic, with the occasional opinionated statement. They are curious about social, political, and moral views.
-2. Writing style: The user is described as formal and casual in their writing style. They are often opinionated, but also have a strong sense of self-awareness.
-3. Personality traits: The user's personality traits are indicated as curious, introverted, and opinionated. They tend to be social and politically engaged, but also possess strong moral values.
-4. Stated Opinions or Beliefs: A list of specific citation to the user's post/comment number and subreddit is provided. The user's opinions on intern season, H1B holderships, and multiple granaries are all mentioned in this section.
-5. Citaction: This format is used consistently throughout the section, with each citation being followed by a specific subreddit reference.
+1. Interest (formal, casual, sarcastic)
+- "Interest" here means that they prefer to engage in discussions about specific topics or issues.
+    - Examples:
+        - "I'm interested in psychology and often read academic papers on the topic."
+        - "I find social media a useful tool for staying up-to-date with current events, but I've also heard it can be addictive."
+2. Writing style (e.g., formal, casual, sarcastic)
+- "Writing" here refers to the art of expressing thoughts and ideas in a clear and organized way.
+    - Examples:
+        - "I'm a writer at heart, but I often struggle with drafting or editing."
+        - "I enjoy writing poetry when I get an inspiration, but I'm not very good at it personally."
+3. Personality traits (e.g., curious, introverted, opinionated)
+- "Personality" here refers to the way someone perceives and approaches the world around them.
+    - Examples:
+        - "Curious about the world around me and often seek out new experiences."
+        - "I tend to have an opinion on most issues, but sometimes I struggle with expressing it in a clear and concise manner."
+4. Stated Opinions or Beliefs (e.g., social, political, moral views)
+- "Opinion" here refers to the way someone feels about specific topics or issues.
+    - Examples:
+        - "I tend to believe that social equality is crucial for a thriving society."
+        - "I have some strong opinions on political issues and often express them in public."
+5. Demo graphic citation (only if clearly implied)
+- "Citation" here refers to the way someone documents their research or other scholarly sources.
+    - Examples:
+        - "I'm an avid reader of academic papers and often use reference books to support my arguments."
+        - "I also regularly check out articles from reputable news outlets to stay up-to-date with current events."
+
+Confidence Score: 🌕🌕🌕🌕🌕 (5/5) — based on 31 posts and 100 comments.

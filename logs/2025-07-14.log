@@ -1,0 +1,16 @@
+2025-07-14 23:14:56 [INFO] ✅ Persona Generator started.
+2025-07-14 23:14:56 [WARNING] ⚠️ Not enough Reddit posts
+2025-07-14 23:14:56 [ERROR] ❌ Something went wrong
+2025-07-14 23:14:56 [INFO] 🔍 Starting persona generation
+2025-07-14 23:14:56 [DEBUG] ✅ This debug message will show only if DEBUG level is enabled
+2025-07-14 23:14:56 [INFO] 🔍 Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-14 23:14:58 [INFO] ✅ Fetched 31 posts for user 'kojied'
+2025-07-14 23:15:00 [INFO] ✅ Fetched 100 comments for user 'kojied'
+2025-07-14 23:15:14 [INFO] ✅ Persona saved to: output/kojied_persona.txt
+2025-07-14 23:17:48 [INFO] ✅ Persona Generator started.
+2025-07-14 23:17:48 [INFO] 🔍 Starting persona generation
+2025-07-14 23:17:48 [DEBUG] ✅ This debug message will show only if DEBUG level is enabled
+2025-07-14 23:17:48 [INFO] 🔍 Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-14 23:17:50 [INFO] ✅ Fetched 31 posts for user 'kojied'
+2025-07-14 23:17:52 [INFO] ✅ Fetched 100 comments for user 'kojied'
+2025-07-14 23:18:13 [INFO] ✅ Persona saved to: output/kojied_persona.txt

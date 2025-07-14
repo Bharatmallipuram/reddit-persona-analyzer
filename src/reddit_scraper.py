@@ -1,8 +1,10 @@
 import praw
 import os
 from dotenv import load_dotenv
+from logger import setup_logger
 
 load_dotenv()
+logger = setup_logger()
 
 def get_reddit_instance():
     return praw.Reddit(
@@ -13,12 +15,6 @@ def get_reddit_instance():
         user_agent=os.getenv("USER_AGENT")
     )
 
-def is_valid_text(text, min_length=50):
-    if not text:
-        return False
-    text = text.strip()
-    return len(text) >= min_length and text.lower() not in ["[deleted]", "[removed]"]
-
 def scrape_user_data(username, limit=100):
     reddit = get_reddit_instance()
     user = reddit.redditor(username)
@@ -26,40 +22,43 @@ def scrape_user_data(username, limit=100):
     posts = []
     comments = []
 
-    # Fetch posts
+    # Fetch submissions (posts)
     try:
         for submission in user.submissions.new(limit=limit):
-            if is_valid_text(submission.selftext):
-                posts.append({
-                    "title": submission.title,
-                    "selftext": submission.selftext,
-                    "subreddit": str(submission.subreddit),
-                    "url": submission.url,
-                    "created_utc": submission.created_utc,
-                    "permalink": submission.permalink
-                })
+            posts.append({
+                "title": submission.title,
+                "selftext": submission.selftext,
+                "subreddit": str(submission.subreddit),
+                "url": submission.url,
+                "created_utc": submission.created_utc
+            })
+        logger.info(f"✅ Fetched {len(posts)} posts for user '{username}'")
     except Exception as e:
-        print(f"[!] Error fetching posts for {username}: {e}")
+        logger.warning(f"[!] Error fetching posts for {username}: {e}")
 
     # Fetch comments
     try:
         for comment in user.comments.new(limit=limit):
-            if is_valid_text(comment.body):
-                comments.append({
-                    "body": comment.body,
-                    "subreddit": str(comment.subreddit),
-                    "link_title": comment.link_title,
-                    "created_utc": comment.created_utc,
-                    "permalink": comment.permalink
-                })
+            comments.append({
+                "body": comment.body,
+                "subreddit": str(comment.subreddit),
+                "link_title": comment.link_title,
+                "created_utc": comment.created_utc
+            })
+        logger.info(f"✅ Fetched {len(comments)} comments for user '{username}'")
     except Exception as e:
-        print(f"[!] Error fetching comments for {username}: {e}")
+        logger.warning(f"[!] Error fetching comments for {username}: {e}")
+
+    if not posts and not comments:
+        logger.error(f"❌ No content found for user '{username}'")
+        raise ValueError("No accessible posts or comments found")
 
     return {
         "username": username,
         "posts": posts,
         "comments": comments
     }
+
 
 # Test run
 if __name__ == "__main__":
