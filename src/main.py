@@ -4,6 +4,8 @@ from reddit_scraper import scrape_user_data
 from persona_generator import generate_persona_with_ollama
 import os
 
+os.makedirs("output", exist_ok=True)
+
 def extract_username_from_url(url):
     try:
         parsed_url = urlparse(url)

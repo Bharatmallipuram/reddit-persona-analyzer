@@ -36,7 +36,6 @@ From the content provided below, extract:
 
 Each insight must be followed by a **citation** to the post/comment number and subreddit.  
 Use this format:
-
 ↳ Source: Post 2 (r/science), Comment 1 (r/AskReddit)
 
 Be structured, specific, and avoid speculation.
@@ -46,11 +45,15 @@ Be structured, specific, and avoid speculation.
 🗂 Reddit Activity:
 {combined_text}
 """
-
     return prompt
 
+def calculate_confidence_score(posts, comments):
+    count = len(posts) + len(comments)
+    score = min(5, count // 10)
+    moons = "🌕" * score + "🌑" * (5 - score)
+    return f"Confidence Score: {moons} ({score}/5) — based on {len(posts)} posts and {len(comments)} comments."
 
-def generate_persona_with_ollama(username, posts, comments, model = "tinyllama"):
+def generate_persona_with_ollama(username, posts, comments, model="tinyllama"):
     prompt = generate_prompt(username, posts, comments)
 
     with Progress(
@@ -58,7 +61,7 @@ def generate_persona_with_ollama(username, posts, comments, model = "tinyllama")
         TextColumn("[progress.description]{task.description}"),
         transient=True,
     ) as progress:
-        task = progress.add_task("⏳ Generating persona with Mistral (optimized)...", start=False)
+        task = progress.add_task(f"⏳ Generating persona with {model}...", start=False)
         progress.start_task(task)
 
         response = ollama.chat(
@@ -67,5 +70,8 @@ def generate_persona_with_ollama(username, posts, comments, model = "tinyllama")
         )
 
     persona = response['message']['content']
+    confidence = calculate_confidence_score(posts, comments)
+    full_output = f"{persona}\n\n{confidence}"
+
     console.print("[green]✅ Persona generated successfully![/green]")
-    return persona
+    return full_output
