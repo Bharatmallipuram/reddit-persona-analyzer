@@ -2,7 +2,6 @@
 
 This project generates structured user personas from Reddit profiles using a local LLM (TinyLlama). Given any Reddit username, the system scrapes their recent posts/comments and builds a human-like persona with citations using language modeling.
 
----
 
 ## 🚀 Features
 
@@ -12,7 +11,6 @@ This project generates structured user personas from Reddit profiles using a loc
 - 🧾 Citations included (e.g., Post 1 from r/AskReddit)
 - ✅ Modular design – Easily switch to GPT-4, Mistral, or any other model
 
----
 
 ## 🛠️ Tech Stack
 
@@ -24,7 +22,6 @@ This project generates structured user personas from Reddit profiles using a loc
 | Secrets Handling | `python-dotenv`          |
 | Output Format    | Plaintext `.txt`         |
 
----
 
 ## 🧪 Sample Usage
 
@@ -35,7 +32,6 @@ Output is saved to: output/Hungry-Move-6603_persona.txt
 
 🗃️ Project Structure
 ```bash
-.
 ├── src/
 │   ├── main.py                  # Entry point
 │   ├── persona_generator.py     # Generates persona using Ollama
@@ -75,8 +71,6 @@ This shows resource-aware engineering — a key skill for real-world AI deployme
 ### Personality Traits
 - Curious, helpful, and slightly sarcastic
 ↳ Source: Post 2 (r/technology)
-
-...
 
 ```
 

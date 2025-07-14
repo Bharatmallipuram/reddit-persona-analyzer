@@ -1,0 +1,12 @@
+# Python & OS
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+
+# Secret files
+.env
+
+# Output
+/output/
