@@ -1,0 +1,77 @@
+2025-07-15 11:14:44 [INFO]  Persona Generator started.
+2025-07-15 11:14:44 [INFO]  Starting persona generation
+2025-07-15 11:14:44 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:14:44 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:14:46 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:14:48 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:15:13 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:21:05 [INFO]  Persona Generator started.
+2025-07-15 11:21:05 [INFO]  Starting persona generation
+2025-07-15 11:21:05 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:21:05 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:21:07 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:21:08 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:21:52 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:24:54 [INFO]  Persona Generator started.
+2025-07-15 11:24:54 [INFO]  Starting persona generation
+2025-07-15 11:24:54 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:24:54 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:24:56 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:24:58 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:25:36 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:37:03 [INFO]  Persona Generator started.
+2025-07-15 11:37:03 [INFO]  Starting persona generation
+2025-07-15 11:37:03 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:37:03 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:37:06 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:37:08 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:38:11 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:45:14 [INFO]  Persona Generator started.
+2025-07-15 11:45:14 [INFO]  Starting persona generation
+2025-07-15 11:45:14 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:45:14 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:45:17 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:45:18 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:47:01 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:49:41 [INFO]  Persona Generator started.
+2025-07-15 11:49:41 [INFO]  Starting persona generation
+2025-07-15 11:49:41 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:49:41 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:49:43 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:49:45 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:51:11 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:53:46 [INFO]  Persona Generator started.
+2025-07-15 11:53:46 [INFO]  Starting persona generation
+2025-07-15 11:53:46 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:53:46 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:53:48 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:53:50 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:54:33 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:56:14 [INFO]  Persona Generator started.
+2025-07-15 11:56:14 [INFO]  Starting persona generation
+2025-07-15 11:56:14 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:56:14 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:56:17 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:56:19 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:57:14 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 11:58:51 [INFO]  Persona Generator started.
+2025-07-15 11:58:51 [INFO]  Starting persona generation
+2025-07-15 11:58:51 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 11:58:51 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 11:58:54 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 11:58:55 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 11:59:27 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 12:04:21 [INFO]  Persona Generator started.
+2025-07-15 12:04:21 [INFO]  Starting persona generation
+2025-07-15 12:04:21 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 12:04:21 [INFO]  Starting user persona generation for 'kojied' using model: tinyllama
+2025-07-15 12:04:24 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 12:04:26 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 12:05:26 [INFO]  Persona saved to: output/kojied_persona.txt
+2025-07-15 12:07:11 [INFO]  Persona Generator started.
+2025-07-15 12:07:11 [INFO]  Starting persona generation
+2025-07-15 12:07:11 [DEBUG]  This debug message will show only if DEBUG level is enabled
+2025-07-15 12:07:11 [INFO]  Starting user persona generation for 'kojied' using model: mistral
+2025-07-15 12:07:13 [INFO]  Fetched 31 posts for user 'kojied'
+2025-07-15 12:07:15 [INFO]  Fetched 100 comments for user 'kojied'
+2025-07-15 14:42:11 [INFO]  Persona saved to: output/kojied_persona.txt
