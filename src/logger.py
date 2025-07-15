@@ -4,7 +4,7 @@ import sys
 from datetime import datetime
 
 def setup_logger(name="PersonaGen", log_dir="logs", level=logging.DEBUG):
-    # Ensure log directory exists
+    
     os.makedirs(log_dir, exist_ok=True)
 
     # Timestamped log file

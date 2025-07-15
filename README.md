@@ -1,104 +1,111 @@
-# 🧠 Reddit User Persona Generator (LLM-Powered) – BeyondChats Assignment
+#  Reddit Persona Analyzer
 
-This project generates structured user personas from Reddit profiles using a local LLM (TinyLlama). Given any Reddit username, the system scrapes their recent posts/comments and builds a human-like persona with citations using language modeling.
+**Generate psychological user personas from Reddit activity using LLMs like TinyLlama, Mistral (via Ollama), or OpenAI.**
 
+---
 
-## 🚀 Features
+##  Overview
 
-- 🔍 Scrapes Reddit posts and comments via PRAW
-- 🤖 Generates concise user personas using a local LLM (TinyLlama via Ollama)
-- 📄 Outputs results as clean, structured `.txt` files
-- 🧾 Citations included (e.g., Post 1 from r/AskReddit)
-- ✅ Modular design – Easily switch to GPT-4, Mistral, or any other model
+This tool scrapes a Reddit user's **recent posts and comments** and uses a language model to generate a **structured psychological persona** that includes:
 
+-  Interests  
+-  Writing Style  
+-  Personality Traits  
+-  Opinions or Beliefs  
+-  Demographic Clues (if implied)  
+-  With proper post/comment citations
 
-## 🛠️ Tech Stack
+---
 
-| Purpose          | Tech Used                |
-|------------------|--------------------------|
-| Reddit Scraping  | `praw`                   |
-| Persona Modeling | `TinyLlama` via `Ollama` |
-| CLI Interface    | `argparse` + `rich`      |
-| Secrets Handling | `python-dotenv`          |
-| Output Format    | Plaintext `.txt`         |
+##  Features
 
+-  Scrapes Reddit posts & comments using `praw`
+-  Generates personas using:
+  - `Ollama` (TinyLlama, Mistral, etc.)
+  - or `OpenAI GPT models`
+-  Command-line interface using `argparse`
+-  Saves persona reports to `output/` folder
+-  Logs all activity to `logs/app.log`
+-  Modular and production-ready
 
-## 🧪 Sample Usage
+---
 
-```bash
-python src/main.py --url https://www.reddit.com/user/Hungry-Move-6603 --model ollama
-```
-Output is saved to: output/Hungry-Move-6603_persona.txt
-
-🗃️ Project Structure
-```bash
-├── src/
-│   ├── main.py                  # Entry point
-│   ├── persona_generator.py     # Generates persona using Ollama
-│   ├── reddit_scraper.py        # Fetches Reddit posts/comments
-│   ├── utils.py                 # Text cleaning + citation helpers
-├── output/                      # Generated personas
-├── .env.template                # Example env vars
-├── requirements.txt             # Python dependencies
-└── README.md
-```
-
-## Environment Variables
-Copy .env.template and rename it to .env. Fill in your Reddit credentials:
-```bash
-Environment Variables
-Copy .env.template and rename it to .env. Fill in your Reddit credentials:
-```
-Ollama will use the TinyLlama model automatically.
-
-## Why TinyLlama?
-“I chose TinyLlama to ensure fast, local persona generation on limited hardware (i5-1235U, 8GB RAM). It balances speed and quality, with modularity to swap in Mistral or GPT-4 if required.”
-
-This shows resource-aware engineering — a key skill for real-world AI deployment.
-
-## Model Output Example
-``bash
-## User Persona: Hungry-Move-6603
-
-### Interests
-- Interested in startup culture and tech innovations
-↳ Source: Post 1 (r/startups)
-
-### Communication Style
-- Informal, humorous, uses emojis
-↳ Source: Comment 2 (r/funny)
-
-### Personality Traits
-- Curious, helpful, and slightly sarcastic
-↳ Source: Post 2 (r/technology)
-
-```
-
-✅ How to Run
-Clone this repo
-
-Set up .env
-
-Run:
-
-bash
-Copy
-Edit
+##  Installation
 
 ```bash
+git clone https://github.com/Bharatmallipuram/reddit-persona-analyzer.git
+cd reddit-persona-analyzer
+python -m venv venv
+venv\Scripts\activate        # or source venv/bin/activate on Mac/Linux
 pip install -r requirements.txt
-python src/main.py --url <Reddit Profile URL> --model ollama
 ```
 
-## Notes
-Output files are saved in output/ folder
+## Environment Setup
+Create a .env file from the provided template:
+```bash
+# .env.template → rename to .env
+REDDIT_CLIENT_ID=your_client_id
+REDDIT_CLIENT_SECRET=your_client_secret
+REDDIT_USERNAME=your_username
+REDDIT_PASSWORD=your_password
+USER_AGENT=reddit-persona-analyzer/0.1
+```
 
-Only recent 3 posts & 2 comments are analyzed (can be changed)
+## Usage
+```bash
+# Basic usage with TinyLlama (via Ollama)
+python src/main.py --username kojied --model tinyllama
 
-To switch to OpenAI or other models, plug into the modular interface
+# Use mistral instead (if pulled)
+python src/main.py --username exampleuser --model mistral
+```
+Output will be saved to the output/ folder as a .txt file.
 
-## 🙋 About Me
-This project was submitted as part of the AI/LLM Engineer Internship Assignment for BeyondChats.
-Feel free to explore, suggest, or fork!
+## Project Structure
+```bash
+reddit-persona-analyzer/
+├── .env.template
+├── requirements.txt
+├── README.md
+├── logger.py
+├── output/
+├── logs/
+├── src/
+│   ├── main.py
+│   ├── persona_generator.py
+│   ├── reddit_scraper.py
+│   └── utils.py
+```
 
-Designed for performance, readability, and future extensibility.
+## Sample Output
+kojied_persona.txt
+```bash
+Interests:
+- Philosophy, AI, and technology ↳ Source: Post 1 (r/singularity)
+- Self-reflection and motivation ↳ Source: Comment 2 (r/DecidingToBeBetter)
+
+Writing Style:
+- Thoughtful and articulate
+- Frequently uses analogies and reflective tone
+...
+```
+
+## Tech Stack
+
+ Python 3.10+
+ PRAW (Reddit API wrapper)
+ Ollama (TinyLlama, Mistral)
+ argparse + dotenv + logging
+ rich for beautiful terminal outputs
+
+## Author
+Bharat Mallipuram
+AI & LLM Enthusiast | Full-Stack Dev
+[Github_link](https://github.com/Bharatmallipuram)
+
+## License
+This project is for educational and assignment purposes only.
+```markdown
+
+Let me know if you'd like a **compressed summary**, **OpenAI mode added**, or even a **badge-style header for GitHub**.
+```
