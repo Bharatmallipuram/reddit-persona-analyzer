@@ -26,7 +26,7 @@ def setup_logger(name="PersonaGen", log_dir="logs", level=logging.DEBUG):
     logger.addHandler(file_handler)
 
     # Stream Handler (console)
-    stream_handler = logging.StreamHandler(sys.stdout)
+    stream_handler = logging.StreamHandler(sys.stdout)   # Prints the log into the terminal.
     try:
         stream_handler.setFormatter(formatter)
     except UnicodeEncodeError:

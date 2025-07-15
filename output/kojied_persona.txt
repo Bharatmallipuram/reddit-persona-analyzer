@@ -1,27 +1,32 @@
-1. Interest (formal, casual, sarcastic)
-- "Interest" here means that they prefer to engage in discussions about specific topics or issues.
-    - Examples:
-        - "I'm interested in psychology and often read academic papers on the topic."
-        - "I find social media a useful tool for staying up-to-date with current events, but I've also heard it can be addictive."
-2. Writing style (e.g., formal, casual, sarcastic)
-- "Writing" here refers to the art of expressing thoughts and ideas in a clear and organized way.
-    - Examples:
-        - "I'm a writer at heart, but I often struggle with drafting or editing."
-        - "I enjoy writing poetry when I get an inspiration, but I'm not very good at it personally."
-3. Personality traits (e.g., curious, introverted, opinionated)
-- "Personality" here refers to the way someone perceives and approaches the world around them.
-    - Examples:
-        - "Curious about the world around me and often seek out new experiences."
-        - "I tend to have an opinion on most issues, but sometimes I struggle with expressing it in a clear and concise manner."
-4. Stated Opinions or Beliefs (e.g., social, political, moral views)
-- "Opinion" here refers to the way someone feels about specific topics or issues.
-    - Examples:
-        - "I tend to believe that social equality is crucial for a thriving society."
-        - "I have some strong opinions on political issues and often express them in public."
-5. Demo graphic citation (only if clearly implied)
-- "Citation" here refers to the way someone documents their research or other scholarly sources.
-    - Examples:
-        - "I'm an avid reader of academic papers and often use reference books to support my arguments."
-        - "I also regularly check out articles from reputable news outlets to stay up-to-date with current events."
+ **Top Interests**
+- New York City Culture  
+↳ Source: Post 1 – r/newyorkcity
+- H1B Visa and Immigration  
+↳ Source: Posts 2 & 3 – r/AskReddit
+- Medieval Roleplay (ManorLords)  
+↳ Source: Comments 1 & 2 – r/ManorLords
 
-Confidence Score: 🌕🌕🌕🌕🌕 (5/5) — based on 31 posts and 100 comments.
+**Communication Style**
+The user's communication style is direct and concise, often expressing feelings of annoyance or frustration. They also demonstrate a logical problem-solving approach, providing suggestions to address the issues they encounter (e.g., having multiple granaries). The use of sarcasm can be observed in some of their posts, such as "I thought that I must have been transported to a college basement party."
+↳ Source: Post 1 – r/newyorkcity
+
+**Personality Traits**
+- Introverted (prefers quieter, mature neighborhoods)  
+↳ Source: Post 1 – r/newyorkcity
+- Opinionated (offers suggestions in comment context)  
+↳ Source: Comment 1 – r/ManorLords
+- Frustrated (shows annoyance towards intern crowds in Post 1)  
+↳ Source: Post 1 – r/newyorkcity
+
+**Stated Opinions / Beliefs**
+- Expresses concerns about being exploited as an H1B holder  
+↳ Source: Posts 2 & 3 – r/AskReddit
+
+**Demographic Clues**
+- Based in New York City (Post 1 – r/newyorkcity)
+- Possibly foreign or an immigrant, based on H1B visa-related posts (Posts 2 & 3 – r/AskReddit)
+
+**Confidence Score**
+4 - Analyzed a significant number of posts and comments to draw insights about the user's interests, communication style, personality traits, opinions, and possible demographic clues. However, due to limited information, some assumptions were made. More data might lead to further refinement of the psychological persona.
+
+Confidence Score: 5 (5/5) — based on 31 posts and 100 comments.
